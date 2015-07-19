@@ -82,6 +82,12 @@
     <Compile Include="Views\FilesView.Designer.cs">
       <DependentUpon>FilesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SingleFileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SingleFileView.Designer.cs">
+      <DependentUpon>SingleFileView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BrowserForm.resx">
       <DependentUpon>BrowserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FilesView.resx">
       <DependentUpon>FilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SingleFileView.resx">
+      <DependentUpon>SingleFileView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

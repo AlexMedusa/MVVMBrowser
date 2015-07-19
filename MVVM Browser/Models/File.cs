@@ -31,8 +31,13 @@ namespace MVVM_Browser.Models {
                 _FileType = value;
             }
         }
+
+        public string FileContent {
+            get { return System.IO.File.ReadAllText(Path); }
+        }
+
         public File() {
 
-        }        
+        }
     }
 }

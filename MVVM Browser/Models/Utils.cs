@@ -9,4 +9,13 @@ namespace MVVM_Browser.Models {
         CS,
         VB
     }
+    public enum FileFilterType {
+        All,
+        CS,
+        VB
+    }
+
+    public enum MessageType {
+        SelectedFileChanged
+    }
 }
