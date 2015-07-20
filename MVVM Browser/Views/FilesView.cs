@@ -1,4 +1,5 @@
-﻿using DevExpress.Utils.MVVM.Services;
+﻿using DevExpress.Utils.MVVM;
+using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraTreeList;
 using MVVM_Browser.Models;
@@ -51,6 +52,7 @@ namespace MVVM_Browser.Views {
         }
 
         private void InitMVVMContext() {
+            MVVMContext.RegisterXtraDialogService();
             mvvmContext1.ViewModelType = typeof(FileCollectionViewModel);
             var fluentAPI = mvvmContext1.OfType<FileCollectionViewModel>();
             fluentAPI.SetBinding(this.buttonEdit1, bEdit => bEdit.EditValue, x => x.FolderPath);
@@ -61,6 +63,8 @@ namespace MVVM_Browser.Views {
                 .SetBinding<File>(x => x.SelectedFile, args => args.Node.TreeList.GetDataRecordByNode(args.Node) as File, (tl, file) => tl.FocusedNode = tl.FindNodeByFieldValue("Path", file.Path));
             fluentAPI.WithEvent<MouseEventArgs>(this.treeList1, "MouseDoubleClick")
                 .EventToCommand(x => x.Show(), x => x.Button);
+
+            mvvmContext1.BindCommand<FileCollectionViewModel>(this.buttonEdit1.Properties.Buttons[0], x => x.StartSearch());
         }
 
 

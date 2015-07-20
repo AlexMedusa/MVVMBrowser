@@ -7,6 +7,7 @@ namespace MVVM_Browser {
             InitializeComponent();
             if (!DesignMode)
                 Init();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Init() {

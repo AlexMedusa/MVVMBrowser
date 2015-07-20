@@ -14,12 +14,15 @@ namespace MVVM_Browser.ViewModel {
         public virtual MVVM_Browser.Models.File SelectedFile { get; set; }
         public virtual FileFilterType FilterType { get; set; }
 
-        protected IDocumentManagerService DocumentManagerService { get { return this.GetService<IDocumentManagerService>(); } }
-        public virtual IList<MVVM_Browser.Models.File> Files {
-            get;
-            set;
-
+        protected IDocumentManagerService DocumentManagerService {
+            get { return this.GetService<IDocumentManagerService>(); }
         }
+        protected IDialogService DialogService {
+            get { return this.GetService<IDialogService>(); }
+        }
+
+        public virtual IList<MVVM_Browser.Models.File> Files { get; set; }
+
         public FileCollectionViewModel() {
             FolderPath = string.Empty;
             Files = new BindingList<MVVM_Browser.Models.File>();
@@ -54,7 +57,6 @@ namespace MVVM_Browser.ViewModel {
                     Files.Remove(Files[i]);
             }
         }
-
         public void Show() {
             ShowCore(SelectedFile);
         }
@@ -64,7 +66,11 @@ namespace MVVM_Browser.ViewModel {
             document.DestroyOnClose = true;
             document.Show();
         }
-
+        public void StartSearch() {
+            var dialogParams = new object[] { Files };
+            if (DialogService.ShowDialog(MessageButton.OKCancel, "Search", "SearchFiles", dialogParams, this) == MessageResult.OK)
+                Files = dialogParams[0] as IList<MVVM_Browser.Models.File>;
+        }
 
         protected virtual void OnFolderPathChanged() {
             GetFiles(FolderPath);

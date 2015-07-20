@@ -76,11 +76,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\DocumentViewModel.cs" />
     <Compile Include="ViewModel\FileCollectionViewModel.cs" />
+    <Compile Include="ViewModel\SearchFileViewModel.cs" />
     <Compile Include="Views\FilesView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\FilesView.Designer.cs">
       <DependentUpon>FilesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchControl.Designer.cs">
+      <DependentUpon>SearchControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SingleFileView.cs">
       <SubType>UserControl</SubType>
@@ -103,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FilesView.resx">
       <DependentUpon>FilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchControl.resx">
+      <DependentUpon>SearchControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SingleFileView.resx">
       <DependentUpon>SingleFileView.cs</DependentUpon>
