@@ -95,7 +95,7 @@
             this.treeList1.OptionsView.ShowColumns = false;
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.SelectImageList = this.imageCollection1;
-            this.treeList1.Size = new System.Drawing.Size(236, 403);
+            this.treeList1.Size = new System.Drawing.Size(236, 404);
             this.treeList1.TabIndex = 1;
             this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             this.treeList1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseDoubleClick);
@@ -167,22 +167,22 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 445);
-            this.barDockControlBottom.Size = new System.Drawing.Size(236, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 446);
+            this.barDockControlBottom.Size = new System.Drawing.Size(236, 22);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 423);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 424);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(236, 22);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 423);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 424);
             // 
             // FilesView
             // 

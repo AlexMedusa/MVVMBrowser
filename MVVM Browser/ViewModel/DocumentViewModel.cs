@@ -10,18 +10,14 @@ namespace MVVM_Browser.ViewModel {
         public DocumentViewModel() {
             Messenger.Default.Register<MVVM_Browser.Models.File>(this, MessageType.SelectedFileChanged, OnSelectedFileChangedMessageRecieved);
         }
-
         protected void OnSelectedFileChangedMessageRecieved(File file) {
             SelectedFile = file;
         }
-
         protected void OnSelectedFileChanged() {
         }
 
         public void GetContent() {
         }
-
-
         public void Show(File selectedFile) {
             ShowCore(SelectedFile);
         }

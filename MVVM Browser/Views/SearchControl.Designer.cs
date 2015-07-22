@@ -39,7 +39,7 @@
             this.textEdit1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textEdit1.Location = new System.Drawing.Point(0, 0);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(446, 20);
+            this.textEdit1.Size = new System.Drawing.Size(1052, 20);
             this.textEdit1.TabIndex = 0;
             // 
             // gridControl1
@@ -48,7 +48,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(446, 335);
+            this.gridControl1.Size = new System.Drawing.Size(1052, 562);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -69,7 +69,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.textEdit1);
             this.Name = "SearchControl";
-            this.Size = new System.Drawing.Size(446, 355);
+            this.Size = new System.Drawing.Size(1052, 582);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

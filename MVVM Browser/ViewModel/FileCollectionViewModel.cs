@@ -70,6 +70,10 @@ namespace MVVM_Browser.ViewModel {
             var dialogParams = new object[] { Files };
             if (DialogService.ShowDialog(MessageButton.OKCancel, "Search", "SearchFiles", dialogParams, this) == MessageResult.OK)
                 Files = dialogParams[0] as IList<MVVM_Browser.Models.File>;
+            //FileAttributes attributes = System.IO.File.GetAttributes("");
+            //   FileInfo fInfo = new FileInfo("");
+            //fInfo.Le
+            //FileAttributes.
         }
 
         protected virtual void OnFolderPathChanged() {
